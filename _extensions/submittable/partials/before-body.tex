@@ -4,15 +4,12 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, otherwise remove this partials to use Quarto default one
 $-- %%%%%%%%%%%%%%%%
 
-$if(params.endnotes)$
+$if(endnotes)$
 \let\footnote=\endnote
 \renewcommand\enoteformat{%
     \normalsize \noindent\theenmark) \ \hangindent .7\parindent %
 }
-$else$
-
 $endif$
-
 
 $if(has-frontmatter)$
 \frontmatter
