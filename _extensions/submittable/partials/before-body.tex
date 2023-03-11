@@ -1,0 +1,31 @@
+$-- Implements the frontmatter, title page, and abstract.
+$--
+$-- %%%% TODO %%%%%
+$-- Customize is needed, otherwise remove this partials to use Quarto default one
+$-- %%%%%%%%%%%%%%%%
+
+$if(params.endnotes)$
+\let\footnote=\endnote
+\renewcommand\enoteformat{%
+    \normalsize \noindent\theenmark) \ \hangindent .7\parindent %
+}
+$else$
+
+$endif$
+
+
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+$if(beamer)$
+\frame{\titlepage}
+$else$
+\maketitle
+$endif$
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+$endif$
