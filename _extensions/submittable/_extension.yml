@@ -18,11 +18,8 @@ contributes:
     pdf:
       # define default configuration for the pdf version of your format
       documentclass: article
-      include-in-header: 
-        text: |
-          \usepackage{orcidlink}
-          \definecolor{mypink}{RGB}{219, 48, 122}
-          \usepackage{endnotes}
+      include-in-header:
+        - "include-in-header.tex"
       template-partials:
         - "partials/title.tex"
         - "partials/_authors.tex"

@@ -2,7 +2,7 @@
 title: "Demo aft format to use as template"
 format:
   submittable-pdf:
-    linestretch: 2          # line spacing (1 for single, 2 for double)
+    linestretch: 1          # line spacing (1 for single, 2 for double)
     mainfont: Times New Roman
     fontsize: 12pt          # font size (typically 10pt, 11pt, or 12pt)
     geometry: margin=1in    # controls the margin size
