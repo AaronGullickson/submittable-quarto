@@ -2,10 +2,6 @@ title: Submittable Manuscript
 author: Aaron Gullickson
 version: 0.0.1
 contributes:
-  execute:
-    echo: false
-    message: false
-    warning: false
   formats:
     common:
       # define below YAML configuration common to all formats
@@ -15,6 +11,11 @@ contributes:
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
+      knitr:
+        opts_chunk:
+          echo: false
+          message: false
+          warning: false
     pdf:
       # define default configuration for the pdf version of your format
       documentclass: article
