@@ -50,6 +50,10 @@ if(!require(gt)) {
   install.packages("gt")
   library(gt)
 }
+if(!require(kableExtra)) {
+  install.packages("kableExtra")
+  library(kableExtra)
+}
 if(!require(palmerpenguins)) {
   install.packages("palmerpenguines")
   library(palmerpenguins)
@@ -101,11 +105,8 @@ Adipiscing pretium duis penatibus habitasse nisi metus parturient convallis matt
 #| tbl-cap: Some Palmer Penguin Data
 palmerpenguins::penguins[c(1,200,205,307),] |> 
   select(species, island, body_mass_g, bill_length_mm, sex) |>
-  group_by(sex) |>
-  gt() |>
-  tab_options(table.width="100%") |>
-  cols_label(species="Species", island="Island", body_mass_g="Body mass (g)", bill_length_mm="Bill length (mm)") |>
-  summary_rows(groups=TRUE, columns=c(body_mass_g, bill_length_mm), fns = list(mean = ~mean(.)))
+  kbl(booktabs=TRUE) |>
+  kable_paper()
 ```
 
 Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-desc-gt Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
