@@ -13,6 +13,8 @@ format:
     endnotes: true
     endfloat: true
     titlepage: true
+  submittable-docx:
+    keep-md: false
 author:
   - name: John Doe
     affiliations:
