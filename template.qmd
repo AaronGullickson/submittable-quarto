@@ -11,7 +11,6 @@ format:
     fig-height: 3.5
     keep-tex: true
     endnotes: true
-    endfloat: true
     titlepage: false
   submittable-docx:
     keep-md: false
