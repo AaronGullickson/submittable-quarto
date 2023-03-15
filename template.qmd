@@ -8,10 +8,11 @@ format:
     geometry: margin=1in    # controls the margin size
     colorlinks: true
     urlcolor: red
-    fig-height: 3
-    endnotes: true
-    endfloat: false
+    fig-height: 3.5
     keep-tex: false
+    endnotes: true
+    endfloat: true
+    titlepage: true
 author:
   - name: John Doe
     affiliations:
@@ -31,6 +32,7 @@ author:
 abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
+thanks: Love to everyone
 reference-section-title: References
 bibliography: bibliography.bib  
 ---

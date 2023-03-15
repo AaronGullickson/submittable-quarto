@@ -18,5 +18,20 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
+$if(titlepage)$
 \author{${ by-author:_authors.tex()[\and ] }}
-\date{$date$}
+$if(title)$
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+$endif$
+$if(subtitle)$
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{$subtitle$}
+$else$
+$endif$
+
+$endif$
