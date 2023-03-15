@@ -12,7 +12,7 @@ format:
     keep-tex: true
     endnotes: true
     endfloat: true
-    titlepage: true
+    titlepage: false
   submittable-docx:
     keep-md: false
 author:
