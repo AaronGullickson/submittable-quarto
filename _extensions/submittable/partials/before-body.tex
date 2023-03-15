@@ -22,6 +22,12 @@ $if(abstract)$
 $abstract$
 \end{abstract}
 $endif$
+$if(keywords)$
+\textbf{Keywords:}
+\def\sep{, }
+$for(keywords/allbutlast)$$keywords$\sep $endfor$
+$for(keywords/last)$$keywords$$endfor$
+$endif$
 
 $if(titlepage)$
 \pagenumbering{gobble}

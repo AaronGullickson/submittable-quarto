@@ -11,25 +11,26 @@ format:
     fig-height: 3.5
     keep-tex: true
     endnotes: true
-    titlepage: false
+    titlepage: true
   submittable-docx:
     keep-md: false
 author:
   - name: John Doe
-    affiliations:
-      - name: Dummy org
-        department: Cool Dep
-        address: Somewhere
-        city: Magic city
-        country: best one
-        postal-code: 9999
-      - Demo Journal
     orcid: 0000-0000-0000-0000
-    email: JD@example.org
-    url: https://example.org/
-  - name: his friend
+    email: john@somewhere.edu
+    url: https://aarongullickson.netlify.app/
+    attributes:
+      corresponding: true
     affiliations:
-      - Another Affiliation
+      - id: uni
+        name: University of State
+        department: Department of Cool
+      - id: uni-another
+        name: Neato Institute
+        department: Engineering
+  - name: Jane Doe
+    affiliations:
+      - ref: uni
 abstract: |
   Ipsum nostra facilisis sapien nullam. Facilisi himenaeos pharetra ultricies scelerisque non fusce quisque aliquam netus tellus. Dictum tellus et sociis quisque ornare ad a natoque magna blandit. Tortor duis aptent cursus lacus inceptos tristique magnis dictumst. Taciti varius nascetur aliquet hac ornare vitae ultricies. Rhoncus primis purus morbi aliquet quam cubilia nullam malesuada ridiculus.
 keywords: [template, demo]
