@@ -2,3 +2,8 @@
 *.fff
 *.ent
 *.pdf
+*.tex
+!_extensions/submittable/partials/*.tex
+*.docx
+!_extensions/submittable/reference.docx
+*_files
