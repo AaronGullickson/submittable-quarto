@@ -15,9 +15,6 @@ $if(has-frontmatter)$
 \frontmatter
 $endif$
 $if(title)$
-$if(beamer)$
-\frame{\titlepage}
-$else$
 \maketitle
 $endif$
 $if(abstract)$
@@ -25,16 +22,19 @@ $if(abstract)$
 $abstract$
 \end{abstract}
 $endif$
-$endif$
 
 $if(titlepage)$
-
 \pagenumbering{gobble}
-
 \newpage 
-
 \pagenumbering{arabic}
-
+$if(title)$
+\LARGE
+\begin{center}
+\title{$title$}
+\end{center}
+\bigskip
+\normalsize
+$endif$
 $if(abstract)$
 \begin{abstract}
 $abstract$

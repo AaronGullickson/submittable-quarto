@@ -9,7 +9,7 @@ format:
     colorlinks: true
     urlcolor: red
     fig-height: 3.5
-    keep-tex: false
+    keep-tex: true
     endnotes: true
     endfloat: true
     titlepage: true
