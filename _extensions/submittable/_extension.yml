@@ -31,5 +31,3 @@ contributes:
         - "partials/before-bib.tex"
     docx: 
       reference-doc: reference.docx
-      
-    csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics

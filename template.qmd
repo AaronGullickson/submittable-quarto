@@ -36,7 +36,9 @@ abstract: |
 keywords: [template, demo]
 thanks: Love to everyone
 reference-section-title: References
-bibliography: bibliography.bib  
+bibliography: bibliography.bib
+csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+
 ---
 
 ```{r}
