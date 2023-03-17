@@ -39,7 +39,6 @@ thanks: Love to everyone
 reference-section-title: References
 bibliography: bibliography.bib
 csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
-
 ---
 
 ```{r}
