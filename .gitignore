@@ -7,3 +7,4 @@
 *.docx
 !_extensions/submittable/reference.docx
 *_files
+.Rproj.user
