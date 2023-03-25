@@ -1,6 +1,6 @@
 This is a [Quarto](https://quarto.org) extension that is designed to assist scholars in the manuscript submission process. It comes with two custom formats.
 
-* **submittable-pdf** - For the creation of a PDF that follows most submission practices (e.g. double-spaced, times 12 point font) and has some YAML options for making common adjustments such as endnotes.
+* **submittable-pdf** - For the creation of a PDF that follows most submission practices (e.g. double-spaced, times 12 point font) and has some YAML options for making common adjustments such as endnotes. You can see a preview of the template at <https://aarongullickson.quarto.pub/demo-of-the-submittable-format/>
 * **submittable-docx** - Creates a word document that follows many standard conventions and serves a good starting point for any post-rendering changes that need to be made to fulfill requirements.
 
 These formats are not designed to be pretty formats but rather formats that will conform or can easily be made to conform with journal submission standards. If you want a pretty format, I suggest taking a look at my [custom aog-article template](https://github.com/AaronGullickson/aog-article-quarto).
