@@ -2,14 +2,6 @@
 title: "Demo of the Submittable Format"
 format:
   submittable-pdf:
-    linestretch: 2          # line spacing (1 for single, 2 for double)
-    mainfont: Times New Roman
-    fontsize: 12pt          # font size (typically 10pt, 11pt, or 12pt)
-    geometry: margin=1in    # controls the margin size
-    papersize: letter
-    colorlinks: true
-    urlcolor: red
-    fig-height: 3.5
     keep-tex: false
     endnotes: true
     titlepage: true
