@@ -1,0 +1,4 @@
+- source: template.qmd
+  quarto-pub:
+    - id: 29f17ce5-bd6a-403a-8197-b9a15d6b58c0
+      url: 'https://aarongullickson.quarto.pub/demo-of-the-submittable-format'
