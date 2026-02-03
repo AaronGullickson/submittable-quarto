@@ -20,8 +20,7 @@ contributes:
       papersize: letter
       colorlinks: true
       urlcolor: red
-      fig-height: 4
-      fig-width: 9
+      fig-width: 6.5
       include-in-header:
         - "header.tex"
       template-partials:
