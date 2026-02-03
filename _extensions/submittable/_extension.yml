@@ -31,7 +31,13 @@ contributes:
         - "partials/after-body.tex"
         - "partials/before-bib.tex"
     docx:
+      # pdf format for proper vector graphs that won't be blurry
       fig-format: pdf
+      # define size
+      out-width: "100%"
+      # with one inch margins, it should be 6.5, but always a little bit of
+      # microsoft junk
+      fig-width: 6.25
       reference-doc: reference.docx
       # this will allow html table output in word documents
-      prefer-html: true
+      # prefer-html: true
