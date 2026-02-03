@@ -40,21 +40,30 @@ if(!require(tidyverse)) {
   install.packages("tidyverse")
   library(tidyverse)
 }
-if(!require(texreg)) {
-  install.packages("texreg")
-  library(texreg)
+if(!require(modelsummary)) {
+  install.packages("modelsummary")
+  library(modelsummary)
 }
 if(!require(gt)) {
   install.packages("gt")
   library(gt)
 }
-if(!require(kableExtra)) {
-  install.packages("kableExtra")
-  library(kableExtra)
-}
 if(!require(palmerpenguins)) {
   install.packages("palmerpenguines")
   library(palmerpenguins)
+}
+```
+
+```{r}
+style_gt_table <- function(gt_table) {
+  gt_table |>
+    tab_options(
+      table.font.size = 11,
+      data_row.padding = px(2),
+      heading.align = "left",
+      table.align = "center"
+    ) |>
+    opt_table_font(font = "Times New Roman")
 }
 ```
 
@@ -110,10 +119,11 @@ Adipiscing pretium duis penatibus habitasse nisi metus parturient convallis matt
 ```{r}
 #| label: tbl-penguin-data
 #| tbl-cap: Some Palmer Penguin Data
+
 palmerpenguins::penguins[c(1,200,205,307),] |> 
   select(species, island, body_mass_g, bill_length_mm, sex) |>
-  kbl(booktabs=TRUE) |>
-  kable_paper()
+  gt() |>
+  style_gt_table()
 ```
 
 Lorem lobortis lectus pellentesque sapien vivamus eros felis cum. Mattis risus euismod vivamus vel mi nostra euismod euismod praesent aliquam? @tbl-penguin-data Sagittis posuere bibendum turpis arcu maecenas gravida leo sollicitudin primis. Ullamcorper lacinia laoreet tincidunt mollis torquent semper. Sem nascetur eleifend gravida nostra magnis arcu gravida facilisis sollicitudin? Cum curae placerat et auctor faucibus arcu ad mauris sollicitudin nunc! Posuere iaculis arcu dapibus dis ullamcorper pellentesque penatibus ultrices sed aenean ligula ullamcorper donec aliquam.
@@ -176,7 +186,6 @@ Consectetur torquent justo cubilia luctus justo erat dignissim faucibus aliquet 
 ```{r}
 #| label: tbl-reg
 #| tbl-cap: A Caption
-#| results: asis
 
 # build your models here - change these
 model1 <- lm(mpg~cyl+disp, data=mtcars)
@@ -184,14 +193,10 @@ model2 <- lm(mpg~cyl+disp+hp, data=mtcars)
 model3 <- lm(mpg~cyl+disp+hp+wt, data=mtcars)
 
 #to print to screen replace texreg with screenreg
-texreg(list(model1, model2, model3),
-        #custom.coef.names = c("Covariate labels here"), #uncomment to add nice labels to independent variables
-        digits = 3,
-        caption.above=TRUE, 
-        include.rsquared=TRUE,
-        include.adjrs=FALSE,
-        include.nobs=TRUE,
-        include.rmse=FALSE)
+modelsummary(list(model1, model2, model3),
+             output = "gt",
+             format = 3) |>
+  style_gt_table()
 ```
 
 # Conclusions
